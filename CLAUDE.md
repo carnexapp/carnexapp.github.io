@@ -32,7 +32,8 @@ Carnex bir **araç bakım defteridir**; sağlık özelliği yoktur (Play beyanı
 - Söylenmez: "tamamen/her zaman ücretsiz", "hesap yok" ("hesap vermemek" diye okunur), "kayıt yok" (uygulamada "kayıt" bakım kaydı demek); yerine "üyelik yok" (kullanıcı kararı 2026-11-08). İndirim sayacı, "son fırsat" yok.
 
 ## Terimler (uygulamayla aynı)
-- Muayene, sigorta, kasko, MTV için **"Resmi işler"** (EN "Paperwork") denir; "son tarihler" denmez (kullanıcı kararı 2026-11-08). Kaynak: `D:\carnex\src\i18n\locales\tr.ts` / `en.ts`.
+- Muayene, sigorta, kasko, MTV bölümünün adı **henüz yok**: "Resmi işler" geri çekildi (devlet/e-Devlet bağlantısı varmış gibi okunur, Play yanıltıcı beyan riski; kullanıcı 2026-11-08), "son tarihler" de denmez. Yeni ad uygulama oturumundan gelene kadar tarafsız yazılır: "muayene, sigorta, kasko ve MTV tarihleri". Kaynak: `D:\carnex\src\i18n\locales\tr.ts` / `en.ts`.
+- Devlet kurumu, e-Devlet ya da resmî bağlantı çağrışımı yapan ifade yazılmaz.
 
 ## Site kuralları
 - TR ve EN sayfalar senkron (`index.html` ↔ `en/index.html`, `gizlilik/` ↔ `en/privacy/`).
