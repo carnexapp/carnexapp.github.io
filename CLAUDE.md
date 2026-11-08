@@ -31,6 +31,9 @@ Carnex bir **araç bakım defteridir**; sağlık özelliği yoktur (Play beyanı
 - Söylenir: "Abonelik yok, bir kez öde", "1 araç ücretsiz", "Abonelik yok · üyelik yok · verilerin telefonunda". Ücretsiz ve tam sürüm içerikleri açıkça listelenir.
 - Söylenmez: "tamamen/her zaman ücretsiz", "hesap yok" ("hesap vermemek" diye okunur), "kayıt yok" (uygulamada "kayıt" bakım kaydı demek); yerine "üyelik yok" (kullanıcı kararı 2026-11-08). İndirim sayacı, "son fırsat" yok.
 
+## Terimler (uygulamayla aynı)
+- Muayene, sigorta, kasko, MTV için **"Resmi işler"** (EN "Paperwork") denir; "son tarihler" denmez (kullanıcı kararı 2026-11-08). Kaynak: `D:\carnex\src\i18n\locales\tr.ts` / `en.ts`.
+
 ## Site kuralları
 - TR ve EN sayfalar senkron (`index.html` ↔ `en/index.html`, `gizlilik/` ↔ `en/privacy/`).
 - Gizlilik politikası `D:\carnex\docs\privacy-policy.md` ile aynı metindir; burada kendiliğinden farklı bir şey yazılmaz. `/gizlilik/` ve `/en/privacy/` yolları kalıcıdır (uygulama ve Play Console bağlar).
