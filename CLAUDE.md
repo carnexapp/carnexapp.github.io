@@ -42,7 +42,9 @@ Carnex bir **araç bakım defteridir**; sağlık özelliği yoktur (Play beyanı
 ## Marka
 Karar uygulama oturumunda verilir ve buraya işlenir (kaynak: `D:\carnex\PROGRESS.md` › Marka rengi).
 - **Renk (2026-11-08):** gece mavisi, açık zeminde `#1E5A8C`, koyu zeminde `#7DB8EA`.
-- Uygulamanın yazı tipi Inter (site için gerekirse yerel dosya olarak gömülür; dış istek yok). Simge ve ses tonu henüz yok.
+- Uygulamanın yazı tipi Inter (sitede gövde yazısı; `assets/fonts/` altında yerel, dış istek yok).
+- **Yazı logosu (2026-11-08):** "CAR" + "NEX", Saira Semi Condensed 700, letter-spacing .02em; koyu zeminde CAR `#E8F0F8`, NEX `#7DB8EA`, zemin `#0B2135`; açık zeminde CAR metin rengi, NEX `#1E5A8C`. Sitede başlıklar da Saira Semi Condensed.
+- **Uygulama simgesi (2026-11-08):** "CX", gece mavisi gradyan zemin. Ana dosya `D:\carnex\assets\brand\carnex-icon.svg` (sitede `assets/icon.svg`), 1024 px `D:\carnex\assets\images\icon.png`; sitedeki `favicon.png` ve `apple-touch-icon.png` bundan üretildi. Ses tonu henüz yok.
 - Ek renk temaları (6 adet, tam sürüm) henüz yapılmadı: sitede gösterilmez, vaat edilmez.
 
 ## İletişim ve hesaplar
