@@ -49,7 +49,7 @@ Karar uygulama oturumunda verilir ve buraya işlenir (kaynak: `D:\carnex\PROGRES
 - Uygulamanın yazı tipi Inter (sitede gövde yazısı; `assets/fonts/` altında yerel, dış istek yok).
 - **Yazı logosu (2026-11-08):** "CAR" + "NEX", Saira Semi Condensed 700, letter-spacing .02em; koyu zeminde CAR `#E8F0F8`, NEX `#7DB8EA`, zemin `#0B2135`; açık zeminde CAR metin rengi, NEX `#1E5A8C`. Sitede başlıklar da Saira Semi Condensed.
 - **Uygulama simgesi (2026-11-08):** "CX", gece mavisi gradyan zemin. Ana dosya `D:\carnex\assets\brand\carnex-icon.svg` (sitede `assets/icon.svg`), 1024 px `D:\carnex\assets\images\icon.png`; sitedeki `favicon.png` ve `apple-touch-icon.png` bundan üretildi. Ses tonu henüz yok.
-- Ek renk temaları (6 adet, tam sürüm) henüz yapılmadı: sitede gösterilmez, vaat edilmez.
+- **Ek renkler (10a, 2026-11-09):** tam sürümde 6 renk: petrol yeşili, kiremit turuncu, grafit, mürdüm, bronz, gül kurusu (EN petrol green, terracotta, graphite, plum, bronze, dusty rose). Gece mavisi herkese. Gece siyahı listeden çıktı. Ad "Tam sürüm" kalır (Premium/Plus yok).
 
 ## İletişim ve hesaplar
 - Destek e-postası: `carnex.destek@gmail.com` (gizlilik politikası, iletişim).
