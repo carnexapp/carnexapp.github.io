@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Carnex — Araç bakım defteri</title>
   <meta name="description" content="Aracının bakımlarını, kilometresini ve önemli tarihlerini tek yerde tut. Abonelik yok, üyelik yok, verilerin telefonunda.">
-  <meta name="theme-color" content="#F6F8FA" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0E141B" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0B2135">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Carnex">
   <meta property="og:url" content="https://carnexapp.github.io/">
@@ -20,78 +19,120 @@
   <link rel="alternate" hreflang="en" href="https://carnexapp.github.io/en/">
   <link rel="preload" href="assets/fonts/saira-semi-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#icerik">İçeriğe geç</a>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="wordmark" href="./" aria-label="Carnex">CAR<b>NEX</b></a>
-      <span class="lang"><b>TR</b> · <a href="en/" hreflang="en" lang="en">EN</a></span>
-    </div>
+  <header class="bar">
+      <div class="wrap">
+        <a class="wordmark" href="./" aria-label="Carnex">CAR<b>NEX</b></a>
+        <nav aria-label="Bölümler"><a href="#nasil">Nasıl çalışır</a><a href="#surumler">Sürümler</a><a href="#gizlilik">Gizlilik</a></nav>
+        <span class="lang"><b>TR</b> · <a href="en/" hreflang="en" lang="en">EN</a></span>
+      </div>
   </header>
 
   <main id="icerik">
+  <div class="stage">
     <section class="wrap hero">
-      <div>
+      <div class="copy reveal">
         <h1>Bakımını unutma.<br><span>Geçmişin elinde.</span></h1>
-        <p>Aracının bakımlarını, kilometresini ve önemli tarihlerini tek yerde tut. Sıradakine ne kadar kaldığını gör, zamanı yaklaşınca Carnex hatırlatsın.</p>
+        <p class="lead">Aracının bakımlarını, kilometresini ve önemli tarihlerini tek yerde tut. Sıradakine ne kadar kaldığını gör, zamanı yaklaşınca Carnex hatırlatsın.</p>
         <p class="facts">Abonelik yok · üyelik yok · verilerin telefonunda</p>
-        <span class="play">Yakında Google Play'de</span>
+        <div class="cta"><span class="play">Yakında Google Play'de</span><a class="ghost" href="#nasil">Nasıl çalışır? ↓</a></div>
       </div>
-      <div class="phone" role="img" aria-label="Carnex Özet ekranı, örnek veri: güncel kilometre ve yaklaşan bakımlar">
-        <div class="car">Beyaz hatchback</div>
-        <div class="km num">86.650 km</div>
-        <div class="item"><div class="t"><span>Yağ ve filtre</span><b class="soon num">1.750 km</b></div><div class="track"><i class="soon" style="width:83%"></i></div></div>
-        <div class="item"><div class="t"><span>Muayene</span><b class="num">43 gün</b></div><div class="track"><i style="width:70%"></i></div></div>
-        <div class="item"><div class="t"><span>Hava filtresi</span><b class="num">6.200 km</b></div><div class="track"><i style="width:38%"></i></div></div>
-      </div>
-    </section>
-
-    <section class="chapter" aria-labelledby="kalan">
-      <div class="wrap split">
-        <div>
-          <h2 id="kalan">Ne kadar kaldı, bir bakışta.</h2>
-          <p>Her bakımın aralığını aracının kılavuzuna göre sen girersin, örneğin "10.000 km veya 12 ay". Carnex hangisi önce gelecekse onu sayar ve yaklaşınca haber verir.</p>
-        </div>
-        <div class="card list" role="img" aria-label="Örnek: yaklaşan bakımlar ve kalan süreler">
-          <div class="item"><div class="t"><span>Yağ ve filtre</span><b class="soon num">1.750 km kaldı</b></div><div class="track"><i class="soon" style="width:83%"></i></div></div>
-          <div class="item"><div class="t"><span>Muayene</span><b class="num">43 gün kaldı</b></div><div class="track"><i style="width:70%"></i></div></div>
-          <div class="item"><div class="t"><span>Trafik sigortası</span><b class="num">118 gün kaldı</b></div><div class="track"><i style="width:55%"></i></div></div>
-          <div class="item"><div class="t"><span>Hava filtresi</span><b class="num">6.200 km kaldı</b></div><div class="track"><i style="width:38%"></i></div></div>
+      <div class="ph reveal">
+        <div class="phone" role="img" aria-label="Carnex Özet ekranı, örnek veri: güncel kilometre ve yaklaşan bakımlar">
+          <div class="lbl">Özet</div>
+          <div class="car">Beyaz hatchback</div>
+          <div class="km num">86.650 km</div>
+          <div class="item"><div class="t"><span>Yağ ve filtre</span><b class="soon num">1.750 km</b></div><div class="track"><i class="soon" style="width:83%"></i></div></div>
+          <div class="item"><div class="t"><span>Muayene</span><b class="num">43 gün</b></div><div class="track"><i style="width:70%"></i></div></div>
+          <div class="item"><div class="t"><span>Hava filtresi</span><b class="num">6.200 km</b></div><div class="track"><i style="width:38%"></i></div></div>
+          <div class="item"><div class="t"><span>Trafik sigortası</span><b class="num">118 gün</b></div><div class="track"><i style="width:55%"></i></div></div>
         </div>
       </div>
     </section>
+  </div>
 
-    <section class="chapter" aria-labelledby="karne">
-      <div class="wrap split">
-        <div>
-          <h2 id="karne">Aracının karnesi.</h2>
-          <p>Her bakımı tarih, km ve tutarla yaz. Muayene, sigorta, kasko ve MTV tarihlerini, yakıt alımlarını da ekle. Geçmişin tek listede, istediğin zaman önünde; bakım ve yenileme harcamanı yıl yıl gör.</p>
-        </div>
-        <div class="card" role="img" aria-label="Örnek bakım geçmişi">
-          <div class="rows">
-            <div><span class="d">12.03.2026</span><span>Yağ ve filtre</span><span class="r">78.400 km</span></div>
-            <div><span class="d">04.11.2025</span><span>Fren balatası</span><span class="r">74.120 km</span></div>
-            <div><span class="d">18.06.2025</span><span>Lastik rotasyonu</span><span class="r">70.950 km</span></div>
-            <div><span class="d">02.03.2025</span><span>Yağ ve filtre</span><span class="r">68.300 km</span></div>
+    <section class="wrap story-wrap" id="nasil" aria-labelledby="nasil-baslik">
+      <div class="head reveal">
+        <h2 id="nasil-baslik">Dört adımda aracının defteri.</h2>
+        <p>Aralıkları ve tarihleri sen girersin; Carnex sayar, hatırlatır ve kaydını tutar.</p>
+      </div>
+      <div class="story">
+        <div class="stick" aria-hidden="true">
+          <div class="panel">
+            <div class="phone" role="img" aria-label="Carnex ekranları, örnek veri">
+              <div class="viewport"><div class="reel">
+                <div class="screen" data-s="1">
+                  <div class="lbl">Planlar</div><div class="car">Sıradaki bakımlar</div>
+                  <div class="item"><div class="t"><span>Yağ ve filtre</span><b class="soon num">1.750 km</b></div><div class="track"><i class="soon" style="width:83%"></i></div></div>
+                  <div class="item"><div class="t"><span>Hava filtresi</span><b class="num">6.200 km</b></div><div class="track"><i style="width:38%"></i></div></div>
+                  <div class="item"><div class="t"><span>Lastik rotasyonu</span><b class="num">4.300 km</b></div><div class="track"><i style="width:57%"></i></div></div>
+                  <div class="item"><div class="t"><span>Fren hidroliği</span><b class="num">9 ay</b></div><div class="track"><i style="width:25%"></i></div></div>
+                </div>
+                <div class="screen" data-s="2">
+                  <div class="lbl">Yenileme takvimi</div><div class="car">Yaklaşan tarihler</div>
+                  <div class="date"><span>Muayene</span><b class="soon num">43 gün</b></div>
+                  <div class="date"><span>Trafik sigortası</span><b class="num">118 gün</b></div>
+                  <div class="date"><span>Kasko</span><b class="num">164 gün</b></div>
+                  <div class="date"><span>MTV</span><b class="num">212 gün</b></div>
+                </div>
+                <div class="screen" data-s="3">
+                  <div class="lbl">Geçmiş</div><div class="car">Bakım kayıtları</div>
+                  <div class="rows">
+                    <div><span class="d">12.03.26</span><span>Yağ ve filtre</span><span class="r">78.400</span></div>
+                    <div><span class="d">04.11.25</span><span>Fren balatası</span><span class="r">74.120</span></div>
+                    <div><span class="d">18.06.25</span><span>Lastik rotasyonu</span><span class="r">70.950</span></div>
+                    <div><span class="d">02.03.25</span><span>Yağ ve filtre</span><span class="r">68.300</span></div>
+                  </div>
+                </div>
+                <div class="screen" data-s="4">
+                  <div class="lbl">Ayarlar › Yedek</div><div class="car">Yedek</div>
+                  <div class="bk"><span>Son otomatik yedek</span><b>Pazartesi</b></div>
+                  <div class="date"><span>Yedeği şimdi al</span><b>→</b></div>
+                  <div class="date"><span>Yedekten geri yükle</span><b>→</b></div>
+                </div>
+              </div></div>
+            </div>
+            <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
           </div>
         </div>
+        <ol class="steps" style="list-style:none;margin:0;padding-left:0">
+          <li class="rail" aria-hidden="true"></li><li class="fill" aria-hidden="true"></li>
+          <li class="step on" data-s="1"><span class="n" aria-hidden="true">1</span><span class="k">Planlar</span><h3>Ne kadar kaldı, bir bakışta.</h3><p>Her bakımın aralığını aracının kılavuzuna göre sen girersin, örneğin "10.000 km veya 12 ay". Carnex hangisi önce gelecekse onu sayar ve yaklaşınca haber verir.</p><div class="inline phone"></div></li>
+          <li class="step" data-s="2"><span class="n" aria-hidden="true">2</span><span class="k">Yenileme takvimi</span><h3>Muayene ve sigorta takvimin.</h3><p>Muayene, trafik sigortası, kasko ve MTV tarihlerini sen girersin; zamanı yaklaşınca Carnex hatırlatır.</p><div class="inline phone"></div></li>
+          <li class="step" data-s="3"><span class="n" aria-hidden="true">3</span><span class="k">Geçmiş</span><h3>Aracının karnesi.</h3><p>Her bakımı tarih, km ve tutarla yaz; yakıt alımlarını da ekle. Geçmişin tek listede, istediğin zaman önünde; bakım ve yenileme harcamanı yıl yıl gör.</p><div class="inline phone"></div></li>
+          <li class="step" data-s="4"><span class="n" aria-hidden="true">4</span><span class="k">Yedek</span><h3>Yedeğin elinde.</h3><p>Her hafta otomatik yedek alınır. Yedeğini istediğin yere taşırsın ve yeni telefonda geri yüklersin.</p><div class="inline phone"></div></li>
+        </ol>
       </div>
     </section>
 
-    <section class="chapter" aria-labelledby="surumler">
+    <section class="chapter" aria-labelledby="ayrica">
       <div class="wrap">
-        <h2 id="surumler">Abonelik yok, bir kez öde.</h2>
-        <p>Carnex'i ücretsiz indirirsin; bir aracın bütün defteri ücretsizdir, süre sınırı yoktur.</p>
-        <div class="plans">
+        <h2 id="ayrica" class="reveal">Ayrıca.</h2>
+        <div class="grid">
+          <div class="card reveal"><div class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h12M14 9h2a2 2 0 0 1 2 2v5a1.5 1.5 0 0 0 3 0V8l-3-3"/><path d="M7 8h4"/></svg></div><h3>Yakıt kaydı</h3><p>Alımlarını yaz, ortalamanı gör.</p></div>
+          <div class="card reveal"><div class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/></svg></div><h3>Eski aracını arşivle</h3><p>Araç değiştirince eskisinin geçmişi kaybolmaz.</p></div>
+          <div class="card reveal"><div class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></div><h3>Dışa aktar</h3><p>Kayıtlarını istediğin zaman tablo dosyası (CSV) olarak al.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter band" id="surumler" aria-labelledby="surumler-baslik">
+      <div class="wrap">
+        <h2 id="surumler-baslik" class="reveal">Abonelik yok, bir kez öde.</h2>
+        <p class="reveal">Carnex'i ücretsiz indirirsin; bir aracın bütün defteri ücretsizdir, süre sınırı yoktur.</p>
+        <div class="plans reveal">
           <div class="card">
             <h3>Ücretsiz</h3>
-            <ul><li>1 araç (eskisini arşivleyip geçmişini saklayabilirsin)</li><li>Bakım geçmişi ve hatırlatma</li><li>Yenileme takvimi: muayene, sigorta, kasko, MTV</li><li>Yakıt kaydı ve ortalama</li><li>Haftalık otomatik yedek ve geri yükleme</li></ul>
+            <ul class="check"><li>1 araç (eskisini arşivleyip geçmişini saklayabilirsin)</li><li>Bakım geçmişi ve hatırlatma</li><li>Yenileme takvimi: muayene, sigorta, kasko, MTV</li><li>Yakıt kaydı ve ortalama</li><li>Haftalık otomatik yedek ve geri yükleme</li></ul>
           </div>
           <div class="card full">
             <h3>Tam sürüm <span class="tag">Yakında</span></h3>
-            <ul><li>Sınırsız araç</li><li>Raporlar ve grafikler: yıllık harcama, km başına maliyet, yakıt tüketimi</li><li>PDF bakım geçmişi</li><li>Fiş ve belge fotoğrafları</li><li>6 ek renk: petrol yeşili, kiremit turuncu, grafit, mürdüm, bronz, gül kurusu</li></ul>
+            <ul class="check"><li>Sınırsız araç</li><li>Raporlar ve grafikler: yıllık harcama, km başına maliyet, yakıt tüketimi</li><li>PDF bakım geçmişi</li><li>Fiş ve belge fotoğrafları</li><li>6 ek renk: petrol yeşili, kiremit turuncu, grafit, mürdüm, bronz, gül kurusu</li></ul>
             <p class="note">Tek seferlik ödeme olacak, abonelik olmayacak. Ücretsiz olan hiçbir şey sonradan ücretli olmayacak.</p>
           </div>
         </div>
@@ -99,10 +140,10 @@
       </div>
     </section>
 
-    <section class="chapter" aria-labelledby="gizlilik">
+    <section class="chapter" id="gizlilik" aria-labelledby="gizlilik-baslik">
       <div class="wrap">
-        <h2 id="gizlilik">Girdiğin her şey telefonunda kalır.</h2>
-        <p>Carnex'in sunucusu yok. Üye olmazsın, giriş yapmazsın; reklam ve analitik yok. Yedeğini istediğin yere alırsın (telefon, SD kart ya da kendi bulut klasörün) ve yeni telefonda geri yüklersin. Verilerin yalnızca senin gönderdiğin yere gider.</p>
+        <h2 id="gizlilik-baslik" class="reveal">Girdiğin her şey telefonunda kalır.</h2>
+        <p class="reveal">Carnex'in sunucusu yok. Üye olmazsın, giriş yapmazsın; reklam ve analitik yok. Yedeğini istediğin yere alırsın (telefon, SD kart ya da kendi bulut klasörün) ve yeni telefonda geri yüklersin. Verilerin yalnızca senin gönderdiğin yere gider.</p>
         <p><a href="gizlilik/">Gizlilik politikası</a></p>
         <div class="faq">
           <details><summary>Muayene ve sigorta tarihlerini uygulama mı bulur?</summary><p>Hayır. Tarihleri sen girersin; Carnex yalnızca hatırlatır ve kaydını tutar.</p></details>
