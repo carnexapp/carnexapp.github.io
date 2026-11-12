@@ -101,9 +101,16 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--brand); outlin
 .stick { position: sticky; top: 92px; height: calc(100vh - 116px); max-height: 760px; min-height: 560px; }
 .panel { height: 100%; border-radius: 28px; background: radial-gradient(600px 420px at 50% 18%, #173E63, var(--night)); display: grid; place-items: center; position: relative; overflow: hidden; }
 .panel .phone { width: min(270px, 70%); aspect-ratio: 9 / 19; padding: 0; overflow: hidden; }
-.viewport { position: absolute; inset: 30px 0 0; overflow: hidden; }
+.viewport { position: absolute; inset: 0; overflow: hidden; }
 .reel { display: flex; height: 100%; transition: translate .6s cubic-bezier(.65,0,.25,1); }
 .screen { flex: 0 0 100%; padding: 0 18px; display: grid; align-content: start; gap: 14px; }
+.screen.img { padding: 0; display: block; }
+.screen:not(.img) { padding-top: 30px; }
+/* real app screenshots (status bar cropped) */
+.phone.shot, .panel .phone { background: #121316; }
+.phone.shot { padding: 0; }
+.phone.shot::before, .panel .phone::before { display: none; }
+.phone.shot img, .screen.img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .dots { position: absolute; bottom: 22px; left: 50%; translate: -50% 0; display: flex; gap: 6px; }
 .dots i { width: 7px; height: 7px; border-radius: 9px; background: rgba(232,240,248,.3); transition: width .4s, background-color .4s; }
 .dots i.on { width: 22px; background: var(--sky); }
@@ -191,6 +198,9 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--brand); outlin
   .inline { display: grid; margin-top: 20px; border-width: 1px; border-radius: 20px; padding: 22px 18px; }
   .inline::before { display: none; }
   .inline .screen { padding: 0; }
+  .inline.shotcard { padding: 0; overflow: hidden; max-height: 560px; border-width: 6px; }
+  .inline .screen.img img { height: auto; }
+  .inline.shotcard:has(.bottom) { display: flex; flex-direction: column; justify-content: flex-end; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

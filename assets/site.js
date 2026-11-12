@@ -29,8 +29,8 @@
   steps.forEach(step => {
     const screen = reel.querySelector('.screen[data-s="' + step.dataset.s + '"]').cloneNode(true);
     const slot = step.querySelector('.inline');
-    slot.setAttribute('role', 'img');
-    slot.setAttribute('aria-label', reel.closest('[aria-label]').getAttribute('aria-label'));
+    if (screen.classList.contains('img')) slot.classList.add('shotcard');
+    else { slot.setAttribute('role', 'img'); slot.setAttribute('aria-label', reel.closest('[aria-label]').getAttribute('aria-label')); }
     slot.append(screen);
   });
 
