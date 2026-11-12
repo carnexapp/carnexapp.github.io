@@ -31,6 +31,7 @@ Carnex bir **araç bakım defteridir**; sağlık özelliği yoktur (Play beyanı
 - Model: ücretsiz indirme + tek seferlik "Tam sürüm"; abonelik yok, reklam yok.
 - Söylenir: "Abonelik yok, bir kez öde", "1 araç ücretsiz", "Abonelik yok · üyelik yok · verilerin telefonunda". Ücretsiz ve tam sürüm içerikleri açıkça listelenir.
 - Söylenmez: "tamamen/her zaman ücretsiz", "hesap yok" ("hesap vermemek" diye okunur), "kayıt yok" (uygulamada "kayıt" bakım kaydı demek); yerine "üyelik yok" (kullanıcı kararı 2026-11-08). İndirim sayacı, "son fırsat" yok.
+- **Tam sürüm satışa çıkana kadar tam sürüm özelliği gösteren görsel yok** (kullanıcı kararı 2026-11-12, üç klasörde ortak): mağaza görseli, site ve sosyal medya görsellerinde Raporlar, PDF, fiş/belge fotoğrafları, ek renkler, birden fazla araç görünmez (bir satırı ya da girişi bile). "Tam sürüm · Yakında" metin listesi kalabilir.
 
 ## Terimler (uygulamayla aynı)
 - Muayene, trafik sigortası, kasko, MTV bölümünün adı **"Yenileme takvimi"** (EN "Renewal calendar"; menüde "Yenileme", tanıtımda "Muayene ve sigorta takvimin"). "Resmi işler" ve "son tarihler" denmez (kullanıcı kararı 2026-11-08). Kaynak: `D:\carnex\src\i18n\locales\tr.ts` / `en.ts`.
