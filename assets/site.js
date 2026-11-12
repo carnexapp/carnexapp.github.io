@@ -28,10 +28,10 @@
   // Narrow screens hide the sticky phone; give each step its own copy of its screen.
   steps.forEach(step => {
     const screen = reel.querySelector('.screen[data-s="' + step.dataset.s + '"]').cloneNode(true);
-    const slot = step.querySelector('.inline');
-    if (screen.classList.contains('img')) slot.classList.add('shotcard');
-    else { slot.setAttribute('role', 'img'); slot.setAttribute('aria-label', reel.closest('[aria-label]').getAttribute('aria-label')); }
-    slot.append(screen);
+    const scr = document.createElement('div');
+    scr.className = 'scr';
+    scr.append(screen);
+    step.querySelector('.inline').append(scr);
   });
 
   const mid = el => el.offsetTop + el.offsetHeight / 2;
