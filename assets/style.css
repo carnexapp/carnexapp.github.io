@@ -159,13 +159,14 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--brand); outlin
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat; }
 
-.faq { margin-top: 28px; border-top: 1px solid var(--line); max-width: 720px; }
+.faq { margin-top: 28px; border-top: 1px solid var(--line); max-width: 760px; }
 .faq details { border-bottom: 1px solid var(--line); }
-.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; font-weight: 500; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; font-weight: 500; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; color: var(--brand); }
-.faq details[open] summary::after { content: "–"; }
-.faq details p { margin: 0; padding: 0 0 18px; font-size: 16px; }
+.faq summary::after { content: "+"; flex: none; color: var(--brand); font-size: 22px; line-height: 1.1; transition: rotate .45s cubic-bezier(.2,.7,.2,1); }
+.faq details.is-open summary::after, html:not(.js) .faq details[open] summary::after { rotate: 45deg; }
+.faq summary:hover { color: var(--brand); }
+.faq .a p { margin: 0; padding: 0 0 18px; font-size: 16px; max-width: 64ch; }
 
 /* reveal on scroll (only when JS runs) */
 .js .reveal { opacity: 0; translate: 0 24px; transition: opacity .7s ease, translate .7s cubic-bezier(.2,.7,.2,1); }

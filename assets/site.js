@@ -8,6 +8,41 @@
     addEventListener('scroll', onScroll, { passive: true });
   }
 
+  // FAQ: open and close the answers smoothly instead of jumping.
+  const calm = matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.faq details').forEach(d => {
+    const summary = d.querySelector('summary');
+    const answer = d.querySelector('.a');
+    let anim = null;
+    d.addEventListener('toggle', () => { if (!anim) d.classList.toggle('is-open', d.open); });
+    summary.addEventListener('click', e => {
+      if (calm.matches || !d.animate) return;
+      e.preventDefault();
+      const closing = d.open && !d.classList.contains('closing');
+      const from = d.offsetHeight;
+      if (anim) anim.cancel();
+      let to;
+      if (closing) {
+        d.classList.add('closing');
+        d.classList.remove('is-open');
+        to = summary.offsetHeight + (d.offsetHeight - d.clientHeight);
+      } else {
+        d.classList.remove('closing');
+        d.open = true;
+        d.classList.add('is-open');
+        to = d.offsetHeight;
+        if (answer) answer.animate({ opacity: [0, 1], translate: ['0 -6px', '0 0'] }, { duration: 450, easing: 'ease-out' });
+      }
+      d.style.overflow = 'hidden';
+      anim = d.animate({ height: [from + 'px', to + 'px'] }, { duration: 450, easing: 'cubic-bezier(.2,.7,.2,1)' });
+      anim.onfinish = () => {
+        if (closing) { d.open = false; d.classList.remove('closing'); }
+        d.style.overflow = '';
+        anim = null;
+      };
+    });
+  });
+
   const reveals = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
     reveals.forEach(el => el.classList.add('in'));
